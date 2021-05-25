@@ -1,0 +1,14 @@
+# Dependencies
+node_modules
+yarn.lock
+package-lock.json
+
+# Environment
+.env
+
+# IDE
+/.vscode
+
+# Generated Files
+/dist
+/coverage

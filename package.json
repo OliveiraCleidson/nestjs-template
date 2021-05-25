@@ -1,0 +1,53 @@
+{
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "up": "yarn build && docker-compose up -d",
+    "down": "docker-compose down",
+    "check": "yarn-check -s -u",
+    "test": "jest --passWithNoTests --runInBand --no-cache",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./jest.e2e.config.js",
+    "start": "npm install && nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "start:file": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch /node_modules --no-notify"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "dotenv-cli": "^4.0.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.6",
+    "ts-node-dev": "^1.1.6",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.2.4",
+    "yarn-check": "^0.0.3"
+  },
+  "dependencies": {
+    "@nestjs/common": "^7.6.17",
+    "@nestjs/core": "^7.6.17",
+    "dotenv": "^10.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.1.0"
+  },
+  "_moduleAliases": {
+    "@/tests": "tests",
+    "@louco": "dist"
+  }
+}
