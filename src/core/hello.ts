@@ -1,3 +1,5 @@
 export function helloWorld() {
-  console.log('Welcome to Typescript Backend Template');
+  const phrase = 'Welcome to Typescript Backend Template';
+  console.log(phrase);
+  return phrase;
 }

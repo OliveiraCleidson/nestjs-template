@@ -2,12 +2,14 @@
 node_modules
 yarn.lock
 package-lock.json
+yarn-error.log
 
 # Environment
 .env
 
 # IDE
-/.vscode
+.vscode/*
+!.vscode/launch.json
 
 # Generated Files
 /dist

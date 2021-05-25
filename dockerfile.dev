@@ -1,0 +1,8 @@
+FROM node:14.16.1 as builder
+ENV PORT 5001 
+ENV NODE_ENV development
+
+RUN apt-get update && apt-get install gnupg2 -y
+
+EXPOSE $PORT
+
